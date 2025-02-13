@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2275678395110609736}
   - component: {fileID: 2275678395110609735}
   - component: {fileID: -7882408667801929140}
+  - component: {fileID: 1305974724278230898}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   icon: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!50 &-7882408667801929140
 Rigidbody2D:
   serializedVersion: 4
@@ -148,3 +150,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!111 &1305974724278230898
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275678395110609739}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 3664afad19f86004ba318d71c9e69590, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

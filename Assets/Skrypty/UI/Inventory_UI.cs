@@ -16,7 +16,6 @@ public class Inventory_UI : MonoBehaviour
 
     void Update()
     {
-        Refresh();
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
