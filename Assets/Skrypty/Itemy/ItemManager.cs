@@ -11,15 +11,15 @@ public class ItemManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Collectible collectible in CollectibleItems)
+        foreach (Collectible item in CollectibleItems)
         {
-            AddItem(collectible);
+            AddItem(item);
         }
     }
 
     private void AddItem(Collectible item)
     {
-        if (collectibleItemDict.ContainsKey(item.type))
+        if (!collectibleItemDict.ContainsKey(item.type))
         {
             collectibleItemDict.Add(item.type, item);
         }
@@ -31,6 +31,7 @@ public class ItemManager : MonoBehaviour
         {
             return collectibleItemDict[type];
         }
+
         return null;
     }
 }

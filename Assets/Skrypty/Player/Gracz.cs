@@ -13,15 +13,17 @@ public class Gracz : MonoBehaviour
 
     public void DropItem(Collectible item)
     {
-        Vector3 spawnLocation = transform.position;
+        Vector2 spawnLocation = transform.position;
 
-        float randX = Random.Range(-1f, 1f);
-        float randY = Random.Range(-1f, 1f);
+        Vector2 spawnOffset = Random.insideUnitCircle * 1.25f;
 
-        Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
+        //float randX = Random.Range(-1f, 1f);
+        //float randY = Random.Range(-1f, 1f);
 
-        Collectible droppedItem = Instantiate(item,spawnLocation + spawnOffset,Quaternion.identity);
+        //Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
 
-        droppedItem.rb2d.AddForce(spawnOffset * 2f, ForceMode2D.Impulse);
+        Collectible droppedItem = Instantiate(item,spawnLocation + spawnOffset, Quaternion.identity);
+
+        droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
     }
 }
